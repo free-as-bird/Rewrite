@@ -10,7 +10,7 @@ const response = {
   "data" : {
     "processAppleReceipt" : {
       "__typename" : "SubscriptionResult",
-      "isClassic" : false,
+      "isClassic" : true,
       "subscription" : {
         "productId" : "com.gingerlabs.Notability.premium_subscription",
         "originalTransactionId" : "2000001147842386",
@@ -18,7 +18,7 @@ const response = {
         "refundedDate" : null,
         "refundedReason" : null,
         "isInBillingRetryPeriod" : false,
-        "expirationDate" : "2099-12-31T23:59:59.000Z",
+        "expirationDate" : "2027-12-31T23:59:59.000Z",
         "gracePeriodExpiresAt" : null,
         "overDeviceLimit" : false,
         "expirationIntent" : null,
@@ -31,6 +31,5 @@ const response = {
     }
   }
 };
-
 
 $done({ body: JSON.stringify(response) });
