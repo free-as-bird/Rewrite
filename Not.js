@@ -16,8 +16,8 @@ const response = {
 				"source": "AppStoreConsumer",
 				"tier": "premium",
 				"expirationDate": 4102416000000,
-				"renewalDate": null,
-				"gracePeriodEndDate": null,
+				"renewalDate": 4102417000000,
+				"gracePeriodEndDate": 4102444800000,
 				"details": {
 					"__typename": "AppStoreSubscription",
 					"originalTransactionId": "2000001147842386",
