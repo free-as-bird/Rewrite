@@ -7,29 +7,46 @@ hostname = notability.com
 */
 
 const response = {
-  "data": {
-    "processAppleReceipt": {
-      "__typename": "SubscriptionResult",
-      "error": 0,
-      "subscription": {
-        "__typename": "AppStoreSubscription",
-        "status": "active",
-        "originalPurchaseDate": "2024-09-19T09:27:35.000Z",
-        "originalTransactionId": "570001185968888",
-        "expirationDate": "9999-12-31T23:59:59.000Z",
-        "productId": "com.gingerlabs.Notability.premium_subscription",
-        "tier": "premium",
-        "refundedDate": null,
-        "refundedReason": null,
-        "isInBillingRetryPeriod": false,
-        "gracePeriodExpiresAt": null,
-        "expirationIntent": "CUSTOMER_CANCELLED",
-        "overDeviceLimit": false,
-        "user": null
-      },
-      "isClassic": false
-    }
-  }
+	"data": {
+		"associateAppStoreTransactions": {
+			"__typename": "SubscriptionOverview",
+			"tier": "premium",
+			"current": {
+				"__typename": "Subscription",
+				"source": "AppStoreConsumer",
+				"tier": "premium",
+				"expirationDate": 4102444800000,
+				"renewalDate": null,
+				"gracePeriodEndDate": null,
+				"details": {
+					"__typename": "AppStoreSubscription",
+					"originalTransactionId": "2000001147842386",
+					"productId": "com.gingerlabs.Notability.premium_subscription",
+					"overDeviceLimit": false,
+					"appStoreStatus": "active"
+				}
+			},
+			"prior": null,
+			"quotas": {
+				"__typename": "SubscriptionFeatureQuotaView=",
+				"learnQuestions": {
+					"__typename": "SubscriptionFeatureQuota",
+					"isUsageExceeded": false,
+					"usagePercentage": 0
+				},
+				"learnSummaries": {
+					"__typename": "SubscriptionFeatureQuota",
+					"isUsageExceeded": false,
+					"usagePercentage": 0
+				},
+				"liveTranscription": {
+					"__typename": "SubscriptionFeatureQuota",
+					"isUsageExceeded": false,
+					"usagePercentage": 0
+				}
+			}
+		}
+	}
 };
 
 $done({ body: JSON.stringify(response) });
