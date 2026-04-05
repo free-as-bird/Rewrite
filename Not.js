@@ -15,7 +15,7 @@ const response = {
 				"__typename": "Subscription",
 				"source": "AppStoreConsumer",
 				"tier": "premium",
-				"expirationDate": 4102444800000,
+				"expirationDate": 4102416000000,
 				"renewalDate": null,
 				"gracePeriodEndDate": null,
 				"details": {
